@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RateCity Widgets / Open Source Docs</title>
+  <meta name="author" content="RateCity Open Source">
+
+  
+  <meta name="description" content="RateCity Flash Widgets Bring RateCity top products to your website. Introduction The purpose of this document is to define consumption of the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ratecity.github.io/widgets/flash.html">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RateCity Widgets / Open Source Docs" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/index.html">Home</a></li>
+    
+        <li ><a href="/widgets/index.html">Javascript Widgets</a></li>
+    
+        <li class="active"><a href="/widgets/flash.html">Flash Widgets</a></li>
+    
+        <li ><a href="/widgets/search.html">Search Widgets</a></li>
+    
+        <li ><a href="https://github.com/ratecity/cheveret">Cheveret</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/ratecity" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://twitter.com/ratecity" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+</ul>
+
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+    <div class="span12">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    RateCity Flash Widgets
+    <h3 class="tagline">Bring RateCity top products to your website.</h3>
+  </div>
+</div>
+
+
+<h2>Introduction</h2>
+
+<p>The purpose of this document is to define consumption of the RateCity (http://www.ratecity.com.au) Flash Widget.
+You are assumed to be familiar with HTML and JavaScript programming, along with CSS (Cascading Style Sheets) to control the style.</p>
+
+<h3>Contractual Agreement</h3>
+
+<p>These widgets are provided to our partners to integrate RateCity into partner sites.
+If you would like to integrate these widgets onto your site, please email us: alex (dot) parsons (at) ratecity (dot) com (au) au.
+Any revenue will not be paid to widget users without agreements.</p>
+
+<h3>Implementation Details</h3>
+
+<p>The flash binary should be trafficked by your preferred ad-server. It&#8217;s pre-configured to pass back the page it runs on when requesting data feeds. This allows ratecity to configure the feed to ensure clicks are correctly attributed to you.</p>
+<p>We provide two extra parameters which can be useful if you wish to run the flash binary across many sites and/or segment your clicks by placement. The parameter names are analogous to the Urchin/GA implementation for ease of explaining the concepts.</p>
+<dl>
+  <dt>utm_source</dt>
+  <dd>This is the partner variable which was originally supplied by RateCity</dd>
+  <dt>utm_campaign</dt>
+  <dd>The variable allows click segmentation by whatever value you choose to put in here.</dd>
+</dl>
+<p>You can see how they mighe be used in the following FlashVars snippet</p>
+<script src="https://gist.github.com/qnm/5334896.js"></script>
+
+<section><h2>Credit Cards Medium Rectangle Top 5 Widget</h2>
+
+<dl>
+  <dt>Flash</dt>
+  <dd>
+  <object width="300" height="250" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param value="/assets/rate-city-creditcard-1.1-300x250.swf" name="movie">
+    <param value="high" name="quality">
+    <param value="FlashVars" name="VarA=111&VarB=222&VarC=333">
+    <embed width="300" height="250" FlashVars="VarA=111&VarB=222&VarC=333" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="/assets/rate-city-creditcard-1.1-300x250.swf">
+  </object>
+  </dd>
+  <dd><a href="/assets/rate-city-creditcard-1.1-300x250.swf">RateCity Top 5 Credit Card Medium Rectangle Flash Movie Download</a></dd>
+
+  <dt>300x250 Backup GIF<dt>
+  <dd><img src="/assets/rate-city-backup-300x250.gif"></dd>
+  <dd><a href="/assets/rate-city-backup-300x250.gif">RateCity Top 5 Medium Rectangle Backup GIF Download</a></dd>
+</dl>
+</section>
+<section><h2>Personal Loans Medium Rectangle Top 5 Widget</h2>
+<dl>
+  <dt>Flash</dt>
+  <dd>
+  <object width="300" height="250" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param value="/assets/rate-city-personalloans-1.1-300x250.swf" name="movie">
+    <param value="high" name="quality">
+    <param value="FlashVars" name="VarA=111&VarB=222&VarC=333">
+    <embed width="300" height="250" FlashVars="VarA=111&VarB=222&VarC=333" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="/assets/rate-city-personalloans-1.1-300x250.swf">
+  </object>
+  </dd>
+  <dd><a href="/assets/rate-city-personalloans-1.1-300x250.swf">RateCity Top 5 Personal Loans Medium Rectangle Flash Movie Download</a></dd>
+
+  <dt>300x250 Backup GIF<dt>
+  <dd><img src="/assets/rate-city-backup-300x250.gif"></dd>
+  <dd><a href="/assets/rate-city-backup-300x250.gif">RateCity Top 5 Medium Rectangle Backup GIF Download</a></dd>
+</dl>
+</section>
+<section><h2>Home Loans Medium Rectangle Top 5 Widget</h2>
+
+<dl>
+  <dt>Flash</dt>
+  <dd>
+  <object width="300" height="250" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param value="/assets/rate-city-homeloans-1.1-300x250.swf" name="movie">
+    <param value="high" name="quality">
+    <param value="FlashVars" name="VarA=111&VarB=222&VarC=333">
+    <embed width="300" height="250" FlashVars="VarA=111&VarB=222&VarC=333" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="/assets/rate-city-homeloans-1.1-300x250.swf">
+  </object>
+  </dd>
+  <dd><a href="/assets/rate-city-homeloans-1.1-300x250.swf">RateCity Top 5 Home Loans Medium Rectangle Flash Movie Download</a></dd>
+
+  <dt>300x250 Backup GIF<dt>
+  <dd><img src="/assets/rate-city-backup-300x250.gif"></dd>
+  <dd><a href="/assets/rate-city-backup-300x250.gif">RateCity Top 5 Medium Rectangle Backup GIF Download</a></dd>
+</dl>
+</section>
+<section><h2>Term Deposits Medium Rectangle Top 5 Widget</h2>
+
+<dl>
+  <dt>Flash</dt>
+  <dd>
+  <object width="300" height="250" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param value="/assets/rate-city-termdeposits-1.1-300x250.swf" name="movie">
+    <param value="high" name="quality">
+    <param value="FlashVars" name="VarA=111&VarB=222&VarC=333">
+    <embed width="300" height="250" FlashVars="VarA=111&VarB=222&VarC=333" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="/assets/rate-city-termdeposits-1.1-300x250.swf">
+  </object>
+  </dd>
+  <dd><a href="/assets/rate-city-termdeposits-1.1-300x250.swf">RateCity Top 5 Term Deposits Medium Rectangle Flash Movie Download</a></dd>
+
+  <dt>300x250 Backup GIF<dt>
+  <dd><img src="/assets/rate-city-backup-300x250.gif"></dd>
+  <dd><a href="/assets/rate-city-backup-300x250.gif">RateCity Top 5 Medium Rectangle Backup GIF Download</a></dd>
+</dl>
+</section>
+<section><h2>&#8216;Top Strip&#8217; Top 3 Widget</h2>
+
+<dl>
+  <dt>Flash</dt>
+  <dd>
+  <object width="429" height="43" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+    <param value="rate-city-top3-1.2-300x250.swf" name="movie">
+    <param value="high" name="quality">
+    <param value="testA=1&testB=2&testC=3" name="FlashVars">
+
+    <embed width="429" height="43" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" FlashVars="testA=1&testB=2&testC=3" quality="high" src="/assets/rate-city-top3-1.2-300x250.swf?nocache=1531018153">
+  </object>
+  </dd>
+  <dd><a href="/assets/rate-city-top3-1.2-300x250.swf">RateCity Top 3 &#8216;Top Strip&#8217; Flash Movie Download</a></dd>
+  <dt>429x43 Backup GIF<dt>
+  <dd><img src="/assets/rate-city-top3.gif"></dd>
+  <dd><a href="/assets/rate-city-top3.gif">RateCity Top 3 &#8216;Top Strip&#8217; Backup GIF Download</a></dd>
+</dl>
+</section>
+
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <hr />
+<h2>More?</h2>
+<p>
+  Please get in touch for further details.
+  Email: rob (dot) sharp (at) ratecity (dot) com (dot) au
+</p>
+<p>
+  <small>
+    Copyright &copy; 2013 - RateCity Open Source -
+    <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+  </small>
+</p>
+
+
+        </footer>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

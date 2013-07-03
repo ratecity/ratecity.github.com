@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RateCity Widgets / Open Source Docs</title>
+  <meta name="author" content="RateCity Open Source">
+
+  
+  <meta name="description" content="RateCity Widgets Projects built and maintained by RateCity Introduction The purpose of this document is to define consumption of the RateCity (http &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ratecity.github.io/widgets">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RateCity Widgets / Open Source Docs" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/index.html">Home</a></li>
+    
+        <li class="active"><a href="/widgets/index.html">Javascript Widgets</a></li>
+    
+        <li ><a href="/widgets/flash.html">Flash Widgets</a></li>
+    
+        <li ><a href="/widgets/search.html">Search Widgets</a></li>
+    
+        <li ><a href="https://github.com/ratecity/cheveret">Cheveret</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/ratecity" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://twitter.com/ratecity" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+</ul>
+
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+    <div class="span12">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    RateCity Widgets
+    <h3 class="tagline">Projects built and maintained by RateCity</h3>
+  </div>
+</div>
+<div class='row-fluid'>
+  <div class='span8'>
+    <h2>Introduction</h2>
+    <p>
+      The purpose of this document is to define consumption of the RateCity
+      (http://www.ratecity.com.au) JS Widget API.
+    </p>
+    <p>
+      You are assumed to be familiar with HTML and JavaScript programming, along
+      with CSS (Cascading Style Sheets) to control the style.
+    </p>
+
+  </div>
+  <div class='span4'>
+    <script type="text/javascript">
+      function ratecityConfig() {
+        // product request configuration
+        var config = {
+          vertical: 'credit-cards',
+          stylesheet: "http://feeds.ratecity.com.au/assets/widget.css",
+          container: 'credit-cards-table',
+          limit: 5
+        };
+        return config;
+      };
+    </script>
+    <script src="http://feeds.ratecity.com.au/assets/widget.js" type="text/javascript"></script>
+    <div id="credit-cards-table"></div>
+  </div>
+</div>
+
+<h2>Getting it working</h2>
+<h3>Embedding the code</h3>
+
+<p>Firstly, embed the following code on the page, and use the parameter list below to fill out the parameters.<p>
+<script src="http://gist.github.com/0dd4544df12369914951.js"></script>
+<p>If you are already using JQuery you should probably use the following version instead, as this does not bundle JQuery with the widget.</p>
+<script src="https://gist.github.com/qnm/5259944.js"></script>
+
+<h3>Parameters</h3>
+<p>A number of parameters are required to retrieve results.</p>
+<dl>
+  <dt>vertical</dt>
+  <dd>A string container the vertical that you wish to display products from</dd>
+  <dd>Choose from: home-loans, credit-cards, term-deposits, personal-loans, car-loans, savings-accounts and transaction-accounts.</dd>
+  <dt>stylesheet</dt>
+  <dd>A string url to the css to use when rendering the table, see below</dd>
+  <dt>container</dt>
+  <dd>The html container id to use to load the widget into</dd>
+  <dt>limit</dt>
+  <dd>The maximum number of products to display</dd>
+  <dt>disclaimer</dt>
+  <dd>A string containing additional disclaimer text, appended to the RateCity default disclaimer</dd>
+  <dt>tracking</dd>
+  <dd>A closure which called when the apply link is clicked. The product object contains the product attributes retrieved from the feed, documented elsewhere</dt>
+  <dt>campaign</dt>
+  <dd>A string which will enable a resulting click to be attribute to this specific campaign variable
+</dl>
+
+<h2>Customisation</h2>
+<h3>Widget Markup</h3>
+<p>The javascript, when executed, will use document.write() to embed markup into the DOM. The markup will have a format similar to the example below:</p>
+
+<script src="http://gist.github.com/0611938feb1d03c36a8e.js"></script>
+
+<h3>Customised Styles</h3>
+<p>Most of the classes are self-explanatory, but are detailed below:</p>
+
+<dl>
+  <dt>rc-toptable</dt>
+  <dd>The outer div for the widget</dd>
+  <dt>ratecity_top</dt>
+  <dd>Identifies the outer div for the table title.</dd>
+  <dt>ratecity_tablehead</dt>
+  <dd>Identifies the heading (h2) used for the table title.</dd>
+  <dt>ratecity_header</dt>
+  <dd>Identifies the table row containing the data column headers</dd>
+  <dt>ratecity_rowodd and ratecity_roweven</dt>
+  <dd>Identifies the table row containing product data</dd>
+  <dt>ratecity_company</dt>
+  <dd>Identifies the table data element containing the company logo.</dd>
+  <dd>See above for the markup within this element</dd>
+  <dt>ratecity_product</dt>
+  <dd>
+    Identifies the table data element containing product description.
+    <br />
+    See above for the markup within this element
+  </dd>
+  <dt>ratecity_best_rate_percentage</dt>
+  <dd>Identifies an optional column added using the &#8216;fields&#8217; parameter, in this case best_rate_percentage</dd>
+  <dt>ratecity_apply</dt>
+  <dd>Identifies the table data element containing the markup for a product application.</dd>
+  <dd>See above for the markup within this element</dd>
+  <dt>ratecity_footer</dt>
+  <dd>Outer div for the footer.</dd>
+  <dd>See above for the markup within this element</dd>
+</dl>
+
+<h3>Customised Style Example</h3>
+<p>Below is an example of the style we use on RateCity.</p>
+
+<script src="http://gist.github.com/861716cf4448345808a1.js"></script>
+
+<h2>Leaderboard Widget</h2>
+
+<hr />
+<script type="text/javascript">
+  function ratecityConfig() {
+    // product request configuration
+    var config = {
+      format: 'leaderboard',
+      vertical: 'home-loans',
+      stylesheet: "http://feeds.ratecity.com.au/assets/widget.css",
+      container: 'home-loans-table',
+      limit: 4,
+      disclaimer: 'Your disclaimer here',
+      source: 'omg',
+      campaign: 'credit_cards',
+      // generate google analytics event tracking code for links
+      tracking: function(product) {
+        _gaq.push(['_trackEvent', 'Leads', 'RateCity', 'BestBuyHomeLoan|GotoSite|' + product.company.name + '|' + product.description]);
+      }
+    };
+    return config;
+  };
+</script>
+<script src="http://feeds.ratecity.com.au/assets/widget.js" type="text/javascript"></script>
+<div id="home-loans-table"></div>
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <hr />
+<h2>More?</h2>
+<p>
+  Please get in touch for further details.
+  Email: rob (dot) sharp (at) ratecity (dot) com (dot) au
+</p>
+<p>
+  <small>
+    Copyright &copy; 2013 - RateCity Open Source -
+    <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+  </small>
+</p>
+
+
+        </footer>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

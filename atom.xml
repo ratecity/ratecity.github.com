@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[RateCity Widgets / Open Source Docs]]></title>
+  <link href="http://ratecity.github.io/atom.xml" rel="self"/>
+  <link href="http://ratecity.github.io/"/>
+  <updated>2013-07-03T12:57:07+10:00</updated>
+  <id>http://ratecity.github.io/</id>
+  <author>
+    <name><![CDATA[RateCity Open Source]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
