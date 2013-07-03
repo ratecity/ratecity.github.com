@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="jumbotron">
+  <div class="container">
+    RateCity Search Widgets
+    <h3 class="tagline">Bring RateCity search to your website.</h3>
+  </div>
+</div>
+<div class='row-fluid'>
+  <div class='span8'>
+    <h2>Introduction</h2>
+    <p>The purpose of this document is to define consumption of the RateCity (http://www.ratecity.com.au) JS Search Widget.
+    You are assumed to be  familiar with HTML and JavaScript programming.</p>
+  </div>
+  <div class='span4'>
+    <script type="text/javascript">
+      var cl_debug = false;
+      var cl_dist_id = 4;
+      var cl_load_jquery = true;
+    </script>
+    <script type="text/javascript" src="https://www.ratecity.com.au/cl/cl_widget.js"></script>
+    <div style="clear: both">&nbsp;</div>
+  </div>
+</div>
+
+<h2>Getting it working</h2>
+
+<h3>Embedding the code</h3>
+
+<p>Firstly, embed the following code on the page.<p>
+
+<script src="http://gist.github.com/b1c47efea9a2849c303d.js"></script>
+
+<h3>Parameters</h3>
+
+<p>A number of parameters are required to retrieve results.</p>
+
+<dl>
+  <dt>cl_debug</dt>
+  <dd>Enable debug mode.</dd>
+  <dt>cl_dist_id</dt>
+  <dd>an integer containing your partner code, supplied by RateCity</dd>
+  <dt>cl_load_jquery</dt>
+  <dd>a boolean that determines whether the widget should load jquery or not. If you use jquery already, you should set this to false to avoid version collisions. If you disable this, please let us know.</dd>
+</dl>
+

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="jumbotron">
+  <div class="container">
+    RateCity Flash Widgets
+    <h3 class="tagline">Bring RateCity top products to your website.</h3>
+  </div>
+</div>
+
+
+<h2>Introduction</h2>
+
+<p>The purpose of this document is to define consumption of the RateCity (http://www.ratecity.com.au) Flash Widget.
+You are assumed to be familiar with HTML and JavaScript programming, along with CSS (Cascading Style Sheets) to control the style.</p>
+
+<h3>Contractual Agreement</h3>
+
+<p>These widgets are provided to our partners to integrate RateCity into partner sites.
+If you would like to integrate these widgets onto your site, please email us: alex (dot) parsons (at) ratecity (dot) com (au) au.
+Any revenue will not be paid to widget users without agreements.</p>
+
+<h3>Implementation Details</h3>
+
+<p>The flash binary should be trafficked by your preferred ad-server. It's pre-configured to pass back the page it runs on when requesting data feeds. This allows ratecity to configure the feed to ensure clicks are correctly attributed to you.</p>
+<p>We provide two extra parameters which can be useful if you wish to run the flash binary across many sites and/or segment your clicks by placement. The parameter names are analogous to the Urchin/GA implementation for ease of explaining the concepts.</p>
+<dl>
+  <dt>utm_source</dt>
+  <dd>This is the partner variable which was originally supplied by RateCity</dd>
+  <dt>utm_campaign</dt>
+  <dd>The variable allows click segmentation by whatever value you choose to put in here.</dd>
+</dl>
+<p>You can see how they mighe be used in the following FlashVars snippet</p>
+<script src="https://gist.github.com/qnm/5334896.js"></script>
+
+<section>{% include widgets/_flash_cc_top5.html %}</section>
+<section>{% include widgets/_flash_pl_top5.html %}</section>
+<section>{% include widgets/_flash_hl_top5.html %}</section>
+<section>{% include widgets/_flash_td_top5.html %}</section>
+<section>{% include widgets/_top_strip_top3.html %}</section>
+
+
