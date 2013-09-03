@@ -30,15 +30,16 @@ body_class: welcome-index
     <div class='well affix-top' data-spy='affix' data-offset-top='150'>
       <ul class='nav nav-list'>
         <li class='nav-header'>Feeds</li>
+        <li><a href='#credit-cards-api'>Credit Cards API</a></li>
         <li><a href='#credit-cards-example'>Credit Cards Example</a></li>
-        <li><a href="#credit-cards">Credit Cards</a></li>
+        <li><a href="#credit-cards-attributes">Credit Cards Attributes</a></li>
       </ul>
     </div>
   </div>
   <div class="span9">
     <h1>RateCity Feeds</h1>
-    <fieldset id='credit-cards-example'>
-      <legend>Credit Card Feed Example</legend>
+    <fieldset id='credit-cards-api'>
+      <legend>Credit Cards API</legend>
       <div class='fieldset-content'>
         <p>
           You can fetch a sample set of data in json format by running the following command:
@@ -47,8 +48,14 @@ body_class: welcome-index
         
       </div>
     </fieldset>
-    <fieldset id="credit-cards">
-      <legend>Credit Cards</legend>
+    <fieldset id='credit-cards-example'>
+      <legend>Credit Card Feed Example</legend>
+      <div class='fieldset-content'>
+        {% gist 6422064 %}
+      </div>
+    </fieldset>
+    <fieldset id="credit-cards-attributes">
+      <legend>Credit Cards Attributes</legend>
       <div class="fieldset-content">
         <h2>Feed Attributes</h2>
         <table class='table table-striped'>
