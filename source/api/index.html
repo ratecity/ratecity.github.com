@@ -1,0 +1,209 @@
+---
+layout: api
+body_class: welcome-index
+---
+
+<style type='text/css'>
+  .body { position: relative; }
+  .affix {
+    width: 180px;
+    position: fixed;
+    top: 20px;
+  }
+  .affix-bottom {
+    width: 180px;
+    position: absolute;
+    top: auto;
+    bottom: 200px;
+  }
+  .affix-top {}
+  table pre {
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    padding: 0px;
+  }
+</style>
+
+<div class="row-fluid">
+  <div class="span3 sidebar-nav">
+    <div class='well affix-top' data-spy='affix' data-offset-top='150'>
+      <ul class='nav nav-list'>
+        <li class='nav-header'>Feeds</li>
+        <li><a href='#credit-cards-example'>Credit Cards Example</a></li>
+        <li><a href="#credit-cards">Credit Cards</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="span9">
+    <h1>RateCity Feeds</h1>
+    <fieldset id='credit-cards-example'>
+      <legend>Credit Card Feed Example</legend>
+      <div class='fieldset-content'>
+        <p>
+          You can fetch a sample set of data in json format by running the following command:
+        </p>
+        <pre>curl http://feeds.ratecity.com.au/credit-cards/widget.json</pre>
+        
+      </div>
+    </fieldset>
+    <fieldset id="credit-cards">
+      <legend>Credit Cards</legend>
+      <div class="fieldset-content">
+        <h2>Feed Attributes</h2>
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th width=235>Attribute</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><pre>description</pre></td>
+              <td>The name of the product</td>
+            </tr>
+            <tr>
+              <td><pre>card_type_category_logo_url</pre></td>
+              <td>Card type logo url e.g. for amex, visa, mastercard</td>
+            </tr>
+            <tr>
+              <td><pre>product_type</pre></td>
+              <td>The type of product e.g. credit_card</td>
+            </tr>
+            <tr>
+              <td><pre>interest_free_period_category</pre></td>
+              <td>Denomination for interest_free_period e.g. months</td>
+            </tr>
+            <tr>
+              <td><pre>interest_free_period_quantity</pre></td>
+              <td>Number of interest_free_period e.g. 12</td>
+            </tr>
+            <tr>
+              <td><pre>late_payment_fee_currency</pre></td>
+              <td>Number of late payment fee</td>
+            </tr>
+            <tr>
+              <td><pre>late_payment_fee_frequency</pre></td>
+              <td>Period of late payment fee e.g. monthly</td>
+            </tr>
+            <tr>
+              <td><pre>late_payment_fee_percentage</pre></td>
+              <td>Percentage of balance for late payment</td>
+            </tr>
+            <tr>
+              <td><pre>level_category</pre></td>
+              <td>Card Level e.g. Gold, Platinum</td>
+            </tr>
+            <tr>
+              <td><pre>minimum_repayment_currency</pre></td>
+              <td>Minimum repayment currency value e.g. 4 for $4</td>
+            </tr>
+            <tr>
+              <td><pre>minimum_repayment_percentage</pre></td>
+              <td>Minimum repayment as a percentage of balance</td>
+            </tr>
+            <tr>
+              <td><pre>purpose_category</pre></td>
+              <td>Card purpose e.g. Personal or Business</td>
+            </tr>
+            <tr>
+              <td><pre>purchase_standard_rate_percentage</pre></td>
+              <td>Purchase Standard Rate</td>
+            </tr>
+            <tr>
+              <td><pre>introductory_rate_percentage</pre></td>
+              <td>Introductory Rate</td>
+            </tr>
+            <tr>
+              <td><pre>introductory_period_category</pre></td>
+              <td>Introductory Period Type e.g. Months</td>
+            </tr>
+            <tr>
+              <td><pre>introductory_period_quantity</pre></td>
+              <td>Introductory Period Quantity e.g. 3</td>
+            </tr>
+            <tr>
+              <td><pre>best_rate_percentage</pre></td>
+              <td>The 'best rate' is the lower of the intro rate (with a intro period greater than 10 months) and the purchase standard rate.</td>
+            </tr>
+            <tr>
+              <td><pre>best_rate_type</pre></td>
+              <td>Whether the 'best rate' is the Introductory or the Purchase Standard rate</td>
+            </tr>
+            <tr>
+              <td><pre>annual_fee_percentage</pre></td>
+              <td>Annual Fee as a percentage of balance</td>
+            </tr>
+            <tr>
+              <td><pre>annual_fee_currency</pre></td>
+              <td>Annual Fee as a currency value</td>
+            </tr>
+            <tr>
+              <td><pre>annual_fee_frequency</pre></td>
+              <td>The period of the Annual Fee e.g. yearly</td>
+            </tr>
+            <tr>
+              <td><pre>balance_transfer_rate_percentage</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>apply_url</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>product_url</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>search_url</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>habitual_spender_star_rating</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>big_spender_star_rating</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>everyday_spender_star_rating</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>occasional_spender_star_rating</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>pitch</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>updated_at</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><pre>id</pre></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <pre>
+company
+  id
+  name
+  logo_url
+end
+                </pre>
+              </td>
+              <td>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+  </div>
+</div>

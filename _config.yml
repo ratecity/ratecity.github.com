@@ -33,6 +33,8 @@ navigation:
   url: /widgets/flash.html
 - text: Search Widgets
   url: /widgets/search.html
+- text: API
+  url: /api/index.html
 - text: Cheveret
   url: https://github.com/ratecity/cheveret
 
