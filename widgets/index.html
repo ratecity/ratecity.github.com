@@ -22,10 +22,9 @@
   <link href="/images/favicon.ico" rel="icon">
   <link href="/stylesheets/ratecity.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="RateCity Widgets / Open Source Docs" type="application/atom+xml">
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap-collapse.js"></script>
-  <script src="/js/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/js/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
@@ -44,7 +43,12 @@
           <a href="/"><img alt="Rc-logo-ie" src="/images/rc-logo.png">
         </a></h3>
         <div class="pull-right jumbo-text">
-          <h2>RateCity lets you <a href="/home-loans">compare home loans</a>, <a href="/credit-cards">compare credit cards</a>, <br> <a href="/car-insurance">compare car insurance</a>, <a href="/personal-loans">compare personal loans</a> and much more.</h2>
+          <h2>
+            RateCity lets you <a href="/home-loans">compare home loans</a>,
+            <a href="/credit-cards">compare credit cards</a>, <br />
+            <a href="/car-insurance">compare car insurance</a>,
+            <a href="/personal-loans">compare personal loans</a> and much more.
+          </h2>
         </div>
       </div>
       <div class="navbar">
@@ -59,6 +63,8 @@
         <li ><a href="/widgets/flash.html">Flash Widgets</a></li>
     
         <li ><a href="/widgets/search.html">Search Widgets</a></li>
+    
+        <li ><a href="/api/index.html">API</a></li>
     
         <li ><a href="https://github.com/ratecity/cheveret">Cheveret</a></li>
     
@@ -111,9 +117,13 @@
 <h3>Embedding the code</h3>
 
 <p>Firstly, embed the following code on the page, and use the parameter list below to fill out the parameters.<p>
-<script src="http://gist.github.com/0dd4544df12369914951.js"></script>
+<div><script src='https://gist.github.com/0dd4544df12369914951.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
 <p>If you are already using JQuery you should probably use the following version instead, as this does not bundle JQuery with the widget.</p>
-<script src="https://gist.github.com/qnm/5259944.js"></script>
+<div><script src='https://gist.github.com/5259944.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
 
 <h3>Parameters</h3>
 <p>A number of parameters are required to retrieve results.</p>
@@ -139,7 +149,9 @@
 <h3>Widget Markup</h3>
 <p>The javascript, when executed, will use document.write() to embed markup into the DOM. The markup will have a format similar to the example below:</p>
 
-<script src="http://gist.github.com/0611938feb1d03c36a8e.js"></script>
+<div><script src='https://gist.github.com/0611938feb1d03c36a8e.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
 
 <h3>Customised Styles</h3>
 <p>Most of the classes are self-explanatory, but are detailed below:</p>
@@ -177,7 +189,9 @@
 <h3>Customised Style Example</h3>
 <p>Below is an example of the style we use on RateCity.</p>
 
-<script src="http://gist.github.com/861716cf4448345808a1.js"></script>
+<div><script src='https://gist.github.com/861716cf4448345808a1.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+
 
 <h2>Leaderboard Widget</h2>
 
